@@ -2,6 +2,7 @@
 DevOps Housekeeping tasks
 
 Step 1: Set Up the (Virtual) Environment
+
 `virtualenv -p /usr/bin/python2.7 env`
 
 `source env/bin/activate`
