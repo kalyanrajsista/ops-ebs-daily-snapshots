@@ -3,7 +3,9 @@ DevOps Housekeeping tasks.
 
 Overview: 
 
-Create snapshots for EBS volume attached to EC2 instances. EC2 instances must be have name tags like 'Backup' 'Daily' or 'backup' 'daily'. Python script will match all the instances with the name tags and initiate the snapshot creation based on the CRON set as Cloudwatch event
+Create snapshots for EBS volume attached to EC2 instances. EC2 instances must be have name tags like 'Backup' 'Daily' or 'backup' 'daily'. Python script will match all the instances with the name tags and initiate the snapshot creation based on the CRON set as Cloudwatch event. This solution will scan EC2 instances across all regions in your AWS account.
+
+Also, if you have any Disaster Recovery AWS account, this solution will grant permission and copies the snapshot across AWS account.
 
 Step 1: Set Up the (Virtual) Environment
 
