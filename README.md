@@ -1,5 +1,5 @@
 # OPS
-DevOps Housekeeping tasks
+DevOps Housekeeping tasks. Create snapshots for EBS volume attached to EC2 instances. EC2 instances must be have name tags like 'Backup' 'Daily' or 'backup' 'daily'. Python script will match all the instances with the name tags and initiate the snapshot creation based on the CRON set as Cloudwatch event
 
 Step 1: Set Up the (Virtual) Environment
 
@@ -29,3 +29,5 @@ Step 5: Zip
 `aws s3 cp path/to/ops-daily-snapshots.zip s3://bucket-name-lambdas`
 
 `aws lambda update-function-code --function-name ops-daily-snapshots --s3-bucket bucket-name-lambdas --s3-key ops-daily-snapshots.zip --publish`
+
+Step 6: Create an event (CRON) in Cloudwatch to trigger this lambda on desired need. For example: Hourly, Daily
