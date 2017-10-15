@@ -20,6 +20,6 @@ Step 5: Zip
 cd path/to/dist
 zip -r path/to/deployment_bundle.zip .
 
-aws s3 cp path/to/ops-daily-snapshots.zip s3://marketxls-lambdas
+aws s3 cp path/to/ops-daily-snapshots.zip s3://bucket-name-lambdas
 
-aws lambda update-function-code --function-name ops-daily-snapshots --s3-bucket marketxls-lambdas --s3-key ops-daily-snapshots.zip --publish
+aws lambda update-function-code --function-name ops-daily-snapshots --s3-bucket bucket-name-lambdas --s3-key ops-daily-snapshots.zip --publish
