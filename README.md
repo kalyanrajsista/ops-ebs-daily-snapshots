@@ -1,7 +1,7 @@
 # OPS
 DevOps Housekeeping tasks. 
 
-# Overview: 
+# Overview 
 
 SNAPSHOT CREATION
 -----------------
